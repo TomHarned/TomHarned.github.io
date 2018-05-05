@@ -6,12 +6,16 @@
     <style>
 
       /* GLOBAL STYLES */
+
       a {
         color: red;
       }
 
       h2 {
         font-size: 30px;
+      }
+      html {
+        font-size: 18px;
       }
 
       /* SOCIAL STYLES */
@@ -21,14 +25,30 @@
       }
 
       /* BIO STYLES */
+
+      .bio-wrapper {
+        font-size: 48px;      
+      }
+
       .bio-box {
         border: 1px solid black;
+        font-size: 1rem;
+        padding: 12px;
+        width: 50%;
+      }
+      .bio-box h3 {
+        font-size: 1.5em;
+      }
+      .bio-copy {
+        font-size: 1em;
       }
       .bio-copy a {
         color: green;
       }
+
     </style>
   </head>
+
   <body>
     <h1>I'm an h1</h1>
     <ul>
@@ -43,6 +63,9 @@
       </li>
     </ul>
     <h2>I'm an h2</h2>
+
+    <!-- /* Wrap the bio boxes */ -->
+    <div class="bio-wrapper">
     <div class="bio-box">
       <h3>Michael Hartl</h3>
       <a href="http://twitter.com/mhartl" class="social-link">here</a>
@@ -94,5 +117,6 @@
       </p>
       </div>
     </div>
+  </div>
   </body>
 </html>
