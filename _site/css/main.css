@@ -48,13 +48,19 @@ a img {
 /* END RESET*/
 
 /* GLOBAL STYLES */
-html, body {
-  margin: 0;
-  padding: 0;
+html {
+  box-shadow: 0 0 0 30px #000 inset;
+  padding: 0 30px;
+}
+body {
+  font-family: helvetica, arial, sans;
 }
 h1 {
   font-size: 7vw;
   margin-top: 0;
+}
+a {
+  color: #f00;
 }
 h2 ~ p {
   font-size: 0.8em;
@@ -63,11 +69,34 @@ h2 ~ p {
   max-width: 70%;
   text-align: center;
 }
-a {
-  color: #f00;
-}
+
 
 /* HEADER STYLES */
+.header {
+  background-color: #000;
+  color: #fff;
+  position: fixed;
+  width: 100%;
+  z-index: 20;
+}
+.header-logo {
+  background-color: #000;
+  box-sizing: border-box;
+  display: block;
+  height: 10vh;
+  left: -30px;
+  padding-top: 10px;
+  position: relative;
+  text-align: center;
+  width: 10vh;
+}
+.header-logo:hover,
+.header-logo:active {
+  background-color: #ed6e2f;
+}
+.header-logo img {
+  width: 4.3vh;
+}
 .header-nav {
   float: right;
   padding: 5.5vh 60px 0 0;
@@ -77,40 +106,41 @@ a {
   margin-left: 1em;
 }
 .header-nav > li ~ li {
-  border-left: 1px solid rgba(0, 0, 0, 0.3);
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
   padding-left: 1em;
 }
 .header-nav a {
-  color: #000;
+  color: #fff;
+}
+.nav-links a {
   font-size: 0.8rem;
   font-weight: bold;
   text-decoration: none;
   text-transform: uppercase;
 }
-.header-nav a:hover,
-.header-hav a:active {
+.nav-links a:hover,
+.nav-links a:active  {
   color: #ed6e2f;
 }
-.header-nav > li:first-child a{
+.header-nav > li:first-child a {
   color: #ed6e2f;
 }
 .header-nav > li:first-child a:hover {
-  color: #000;
+  color: #fff;
 }
-.header-logo:hover,
-.header-logo:active {
-  opacity: 0.5;
-}
+
 /* HERO STYLES */
 .full-hero {
   background-color: #c7dbfc;
   height: 50vh;
 }
-.full-hero :hover{
-    color: #ed6e2f;
-}
 
 /* SOCIAL STYLES */
+.social-list {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
 .social-link {
   background: rgba(150, 150, 150, 0.5);
   border-radius: 99px;
@@ -127,14 +157,6 @@ a {
   text-decoration: none;
   vertical-align: middle;
   width: 2.5em;
-}
-.social-link :hover {
-    color: #ed6e2f;
-}
-.social-list {
-  list-style: none;
-  padding: 0;
-  text-align: center;
 }
 .social-list > li {
   display: inline-block;
@@ -154,7 +176,7 @@ a {
   float: left;
   font-size: 1rem;
   margin: 40px 1% 0;
-  padding: 0 2% 2%;
+  padding: 2%;
   width: 23%;
 }
 .bio-box h3 {
@@ -172,7 +194,6 @@ a {
 }
 .bio-copy {
   font-size: 1em;
-  line-height: 1.5;
 }
 .bio-copy a {
   color: green;
